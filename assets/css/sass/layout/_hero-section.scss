@@ -1,0 +1,14 @@
+.main {
+  .hero {
+    height: 100vh;
+    font-family: monospace;
+    color: $azure-x-11;
+    &__title {
+      font-size: 8em;
+      align-self: end;
+    }
+    &__p {
+      font-size: 3em;
+    }
+  }
+}
