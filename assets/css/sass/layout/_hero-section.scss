@@ -4,11 +4,21 @@
     font-family: monospace;
     color: $azure-x-11;
     &__title {
-      font-size: 8em;
+     animation: textin 1.5s ease;
+      font-size: 7em;
       align-self: end;
     }
     &__p {
-      font-size: 3em;
+      animation: textin 1.5s ease;
+      font-size: 2.5em;
+    }
+    &__portrait {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 100%;
+      box-shadow: -60px 50px rgba($color: #d6e5e3, $alpha: 0.5);
+      animation: colorshift 7s infinite;
     }
   }
 }
