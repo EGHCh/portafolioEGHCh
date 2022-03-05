@@ -1,7 +1,7 @@
 @keyframes move-frame {
   50% {
-    border: 5em solid #838383;
-    box-shadow: 0 25px 50px black;
+    border: 5em solid #ebebeb;
+    box-shadow: 0 25px 50px rgba(182, 170, 238, 0.5);
   }
 }
 @keyframes move {
@@ -9,8 +9,8 @@
     transform: translate(-30%, 0);
   }
   50% {
-    text-shadow: 0 25px 50px black;
-    color: #838383;
+    text-shadow: 0 25px 50px rgba(182, 170, 238, 0.5);
+    color: #ebebeb;
   }
   100% {
     transform: translate(30%, 0);
