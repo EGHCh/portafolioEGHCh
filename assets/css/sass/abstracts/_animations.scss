@@ -1,7 +1,8 @@
+// LOGO
 @keyframes move-frame {
   50% {
     border: 5em solid #838383;
-    box-shadow: 0 25px 50px rgb(0, 0, 0);
+    box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.8);
   }
 }
 @keyframes move {
@@ -9,16 +10,21 @@
     transform: translate(-30%, 0);
   }
   50% {
-    text-shadow: 0 25px 50px rgb(0, 0, 0);
+    text-shadow: 25px 25px 50px rgba(0, 0, 0, 0.8);
     color: #838383;
   }
   100% {
     transform: translate(30%, 0);
   }
 }
+// HERO SECTION
 @keyframes textin {
   0% {
     transform: translate(70%, 0);
+    opacity: 0;
+  }
+  80% {
+    opacity:  0.8;
   }
 }
 @keyframes imgin {
@@ -29,7 +35,7 @@
     transform: translate(0%, 0);
   }
 }
-@keyframes colorshift {  
+@keyframes colorshift {
   25% {
     box-shadow: -60px 50px rgba($color: #a6b1e1, $alpha: 1);
   }
@@ -41,5 +47,39 @@
   }
   75% {
     box-shadow: -60px 50px #d6e5e3;
+  }
+}
+// WELCOME ANIMATION
+@keyframes welcome-logo {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  50% {
+    text-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+    color: #525252;
+  }
+  100% {
+    transform: translate(30%, 0);
+  }
+}
+@keyframes welcome-frame {
+  50% {
+    border: 5em solid #525252;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes welcome {
+  from {
+    display: flex;
+  }
+}
+// PORTAFOLIO
+
+@keyframes blur {
+  0% {
+    opacity:  0.5;
+  }  
+  100% {
+    opacity: 0;
   }
 }

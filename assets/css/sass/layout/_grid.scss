@@ -12,3 +12,10 @@
     grid-column-start: 2;
   }
 }
+.pi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .gi-1, .gi-2 {
+    place-self: center;
+  }
+}
