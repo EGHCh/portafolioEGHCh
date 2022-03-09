@@ -3,10 +3,16 @@
     height: 100vh;
     font-family: monospace;
     color: $azure-x-11;
+    grid-gap: 2em;
     &__title {
      animation: textin 1.5s ease;
       font-size: 7em;
       align-self: end;
+    }
+    &__textbox {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
     }
     &__p {
       animation: textin 1.5s ease;

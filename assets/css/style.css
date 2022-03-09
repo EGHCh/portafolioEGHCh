@@ -157,6 +157,39 @@ html body {
   animation-delay: 3.5s;
 }
 
+.contact {
+  height: 100vh;
+  width: 100%;
+}
+.contact__title {
+  font-size: 3em;
+  font-family: "Poppins", sans-serif;
+  color: #d6e5e3;
+}
+.contact__form {
+  width: 70%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4em;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(97, 31, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.contact__input {
+  max-width: 70%;
+  height: 2em;
+}
+.contact__textbox {
+  max-width: 70%;
+  height: 10em;
+}
+
 .hs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,6 +203,11 @@ html body {
 }
 .hs-grid .gi-2 {
   grid-column-start: 2;
+}
+.hs-grid .gi-3 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  align-self: start;
 }
 
 .pi-grid {
@@ -214,11 +252,17 @@ html body {
   height: 100vh;
   font-family: monospace;
   color: #d6e5e3;
+  grid-gap: 2em;
 }
 .main .hero__title {
   animation: textin 1.5s ease;
   font-size: 7em;
   align-self: end;
+}
+.main .hero__textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 .main .hero__p {
   animation: textin 1.5s ease;
@@ -254,6 +298,23 @@ html body {
 .portfolio__item .item__description p {
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
+  margin-top: 1em;
+}
+.portfolio__item .item__description__icons {
+  display: flex;
+  gap: 1em;
+}
+.portfolio__item .item__description__icons .ico {
+  height: 40px;
+  width: 50px;
+  margin-top: 2em;
+}
+.portfolio__item .item__description__icons .ico:hover {
+  height: 55px;
+  width: 65px;
+  margin-top: 5px;
+  border-radius: 5px;
+  object-position: left;
 }
 .portfolio__thumbnail {
   width: 200px;
@@ -273,7 +334,6 @@ html body {
   border-radius: 20px;
   background-image: linear-gradient(to left bottom, #9d86bd, #9e8ec5, #a096cc, #a19ed3, #a3a6d9, #a2a3d6, #a19fd3, #a09cd0, #9d8cc2, #9b7bb2, #996aa1, #97598e);
   opacity: 0.4;
-  z-index: 2;
 }
 .portfolio__thumbnail .mask:hover {
   animation: blur 0.5s ease-in-out;
