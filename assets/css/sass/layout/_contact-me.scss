@@ -1,13 +1,43 @@
 .contact {
   display: flex;
-  &__title {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 3em;
-    letter-spacing: -10px;
-    span {
-      writing-mode: sideways-rl;
-      letter-spacing: 0px;
+  height: 100vh;
+  width: 100%;
+  &__title-cont {
+    display: flex;
+    justify-content: center;
+    font-size: 6em;
+    font-weight: bold;
+    width: 100%;
+    margin: auto 0;
+    &:hover {
+      color: #fff;
+      animation: neon1 1.5s ease-in-out infinite alternate;
     }
+
+    .contact__title {
+      font-family: "Poppins", sans-serif;
+      font-weight: lighter;
+      color: $azure-x-11;
+      span {
+      }
+    }
+    &--shrink {
+      width: 30%;
+      .contact__title {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 3rem;
+        letter-spacing: -10px;
+        animation: shrink-text 1s ease-in;
+        span {
+          writing-mode: sideways-rl;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+  &__form--show {
+    display: flex;
+    animation: show-form 2s ease-in;
   }
 }
