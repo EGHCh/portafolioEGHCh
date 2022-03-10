@@ -361,4 +361,18 @@ html body {
   opacity: 1;
 }
 
+.contact {
+  display: flex;
+}
+.contact__title {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3em;
+  letter-spacing: -10px;
+}
+.contact__title span {
+  writing-mode: sideways-rl;
+  letter-spacing: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */
