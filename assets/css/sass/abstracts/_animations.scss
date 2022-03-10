@@ -1,13 +1,8 @@
 // LOGO
 @keyframes move-frame {
   50% {
-<<<<<<< HEAD
     border: 5em solid #ebebeb;
     box-shadow: 0 25px 50px rgba($color: #b6aaee, $alpha: 0.5);
-=======
-    border: 5em solid #838383;
-    box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.8);
->>>>>>> master
   }
 }
 @keyframes move {
@@ -15,13 +10,8 @@
     transform: translate(-30%, 0);
   }
   50% {
-<<<<<<< HEAD
-    text-shadow: 0 25px 50px rgba($color: #b6aaee, $alpha: 0.5);
-    color: #ebebeb;
-=======
     text-shadow: 25px 25px 50px rgba(0, 0, 0, 0.8);
     color: #838383;
->>>>>>> master
   }
   100% {
     transform: translate(30%, 0);
