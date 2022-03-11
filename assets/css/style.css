@@ -47,27 +47,21 @@
     box-shadow: -60px 50px #d6e5e3;
   }
 }
-@keyframes welcome-logo {
-  0% {
-    transform: translate(-30%, 0);
+@keyframes move-cv {
+  5% {
+    border-radius: 20px;
+  }
+  20% {
+    object-position: top right;
   }
   50% {
-    text-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
-    color: #525252;
+    object-position: bottom right;
+  }
+  80% {
+    object-position: bottom left;
   }
   100% {
-    transform: translate(30%, 0);
-  }
-}
-@keyframes welcome-frame {
-  50% {
-    border: 5em solid #525252;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-  }
-}
-@keyframes welcome {
-  from {
-    display: flex;
+    border-radius: 20px;
   }
 }
 @keyframes blur {
@@ -99,6 +93,7 @@
   0% {
     opacity: 0;
     transform: translate(70%, 0);
+    border: none;
   }
   30% {
     opacity: 0;
@@ -106,6 +101,18 @@
   }
   90% {
     opacity: 0.8;
+  }
+  95% {
+    border-left: 1px solid #cacfd6;
+  }
+}
+@keyframes submit-hover {
+  0% {
+    background-color: rgba(214, 229, 227, 0);
+    color: rgba(0, 0, 0, 0);
+  }
+  70% {
+    color: rgba(25, 25, 25, 0);
   }
 }
 * {
@@ -116,6 +123,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -198,12 +206,12 @@ html body {
   gap: 1em;
   height: 500px;
   border-left: 2px solid #cacfd6;
+  font-family: "Courier New", Courier, monospace;
 }
 .contact__label {
   font-size: 2.5em;
   font-weight: 700;
   color: #d6e5e3;
-  font-family: "Courier New", Courier, monospace;
 }
 .contact__input {
   max-width: 70%;
@@ -211,12 +219,28 @@ html body {
   font-size: 1.5em;
 }
 .contact__textbox {
+  font-size: 2em;
   max-width: 70%;
-  height: 10em;
+  height: 14em;
+  text-align: start;
+  padding: 0.5em;
 }
 .contact__submit {
-  width: 200px;
-  height: 100px;
+  font-size: 6em;
+  font-family: "Poppins";
+  max-width: 70%;
+  text-align: start;
+  border: none;
+  color: #d6e5e3;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.contact__submit:hover {
+  animation: submit-hover 0.5s ease-in;
+  background-color: rgba(214, 229, 227, 0.8);
+  color: #191919;
+  text-align: center;
+  font-weight: 700;
 }
 
 .hs-grid {
@@ -237,6 +261,14 @@ html body {
   grid-column-start: 2;
   grid-row-start: 2;
   align-self: start;
+}
+
+.grid-cv {
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+}
+.grid-cv .gi-1, .grid-cv .gi-2 {
+  place-self: center;
 }
 
 .pi-grid {
@@ -267,19 +299,20 @@ html body {
   align-items: center;
   list-style: none;
 }
-.navbar__item {
+.navbar__item a {
   color: #d6e5e3;
   font-size: 2em;
+  text-decoration: none;
   padding: 0 1em;
 }
-.navbar__item:hover {
+.navbar__item a:hover {
   color: #191919;
   border-radius: 0.5em;
 }
 
 .main .hero {
   height: 100vh;
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   color: #d6e5e3;
   grid-gap: 2em;
 }
@@ -348,6 +381,7 @@ html body {
 .portfolio__thumbnail {
   width: 200px;
   height: 444px;
+  z-index: -1;
 }
 .portfolio__thumbnail img {
   width: 100%;
@@ -404,8 +438,9 @@ html body {
   margin: auto 0;
 }
 .contact__title-cont:hover {
-  color: #fff;
+  color: #000;
   animation: neon1 1.5s ease-in-out infinite alternate;
+  cursor: pointer;
 }
 .contact__title-cont .contact__title {
   font-family: "Poppins", sans-serif;
@@ -429,6 +464,64 @@ html body {
 .contact__form--show {
   display: flex;
   animation: show-form 2s ease-in;
+}
+
+.footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(166, 177, 225, 0.1);
+}
+.footer__logo {
+  border: 10px solid #d6e5e3;
+  height: 85px;
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1px;
+}
+.footer__logo p {
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #d6e5e3;
+}
+
+.skills {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.skills__cv {
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  background: #eeaeca;
+  background: radial-gradient(circle, rgba(238, 174, 202, 0.5032212714) 0%, rgba(148, 187, 233, 0.5032212714) 100%);
+}
+.skills__cv h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  color: #d6e5e3;
+}
+.skills__cv img {
+  height: 300px;
+  width: 300px;
+  place-self: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  object-fit: none;
+  object-position: top left;
+  box-shadow: -25px 20px #191919;
+}
+.skills__cv img:hover {
+  cursor: pointer;
+  box-shadow: -20px 20px #191919;
+  animation: move-cv 10s infinite;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

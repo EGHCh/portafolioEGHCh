@@ -50,29 +50,48 @@
   }
 }
 // WELCOME ANIMATION
-@keyframes welcome-logo {
-  0% {
-    transform: translate(-30%, 0);
+// @keyframes welcome-logo {
+//   0% {
+//     transform: translate(-30%, 0);
+//   }
+//   50% {
+//     text-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+//     color: #525252;
+//   }
+//   100% {
+//     transform: translate(30%, 0);
+//   }
+// }
+// @keyframes welcome-frame {
+//   50% {
+//     border: 5em solid #525252;
+//     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+//   }
+// }
+// @keyframes welcome {
+//   from {
+//     display: flex;
+//   }
+// }
+//SKILLS
+@keyframes move-cv {
+  5% {
+    border-radius: 20px;
+  }
+  20% {
+    object-position: top right;
   }
   50% {
-    text-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
-    color: #525252;
+    object-position: bottom right;
+  }
+  80% {
+    object-position: bottom left;
   }
   100% {
-    transform: translate(30%, 0);
+    border-radius: 20px;
   }
 }
-@keyframes welcome-frame {
-  50% {
-    border: 5em solid #525252;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-  }
-}
-@keyframes welcome {
-  from {
-    display: flex;
-  }
-}
+
 // PORTAFOLIO
 
 @keyframes blur {
@@ -108,6 +127,7 @@
   0% {
     opacity: 0;
     transform: translate(70%, 0);
+    border: none;
   }
   30% {
     opacity: 0;
@@ -116,5 +136,17 @@
 
   90% {
     opacity: 0.8;
+  }
+  95% {
+    border-left: 1px solid $light-gray;
+  }
+}
+@keyframes submit-hover {
+  0% {
+    background-color: rgba($color: $azure-x-11, $alpha: 0);
+    color: rgba($color: #000000, $alpha: 0);
+  }
+  70% {
+    color: rgba($color: rgba($color: $eerie-black, $alpha: 0.8), $alpha: 0);
   }
 }

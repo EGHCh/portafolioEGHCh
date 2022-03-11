@@ -17,14 +17,12 @@
     align-items: center;
     list-style: none;
   }
-  &__item {
+  &__item a{
     color: $azure-x-11;
     font-size: 2em;
-    
+    text-decoration: none;
     padding: 0 1em;
-
     &:hover {
-      // background-color: $light-gray;
       color: $eerie-black;
       border-radius: 0.5em;
     }

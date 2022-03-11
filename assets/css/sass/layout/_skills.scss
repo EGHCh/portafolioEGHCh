@@ -1,0 +1,38 @@
+.skills {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  &__cv {
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 0.5032212714187237) 0%,
+      rgba(148, 187, 233, 0.5032212714187237) 100%
+    );
+    h3 {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 40px;
+      color: $azure-x-11;
+    }
+    img {
+      height: 300px;
+      width: 300px;
+      place-self: center;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      object-fit: none;
+      object-position: top left;
+      box-shadow: -25px 20px $eerie-black;
+      &:hover {
+        cursor: pointer;
+        box-shadow: -20px 20px $eerie-black;
+        animation: move-cv 10s infinite;
+        border-radius: 20px;
+      }
+    }
+  }
+}

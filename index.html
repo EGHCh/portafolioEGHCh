@@ -23,23 +23,23 @@
     <!-- NAVBAR -->
     <nav class="navbar">
       <ul class="navbar__nav">
-        <li class="navbar__item navbar__item--active">Home</li>
-        <li class="navbar__item"><a target="">Portfolio</a></li>
+        <li class="navbar__item"><a href="#hero">Home</a></li>
+        <li class="navbar__item"><a href="#portfolio">Portfolio</a></li>
         <li class="navbar__item"><a>Skills</li>
-        <li class="navbar__item"><a>Contact</a></li>
+        <li class="navbar__item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <main id="main" class="main">
-      <div class="welcome">
+      <!-- <div class="welcome">
         <div class="welcome__logo">
           <p class="word word--frst">
             <span>E</span><span>G</span><span>H</span>
           </p>
           <p class="word word--scnd"><span>C</span><span>h</span></p>
         </div>
-      </div>
+      </div> -->
       <!-- HERO SECTION -->
-      <section class="hero hs-grid">
+      <section id="hero" class="hero hs-grid">
         <img src="assets/img/tebanes2.jpg" alt="" class="hero__portrait gi-1" />
         <h1 class="gi-2 hero__title">Hi! I'm Esteban...</h1>
         <div class="gi-2 hero__textbox">
@@ -60,7 +60,7 @@
         <p class="word word--scnd"><span>C</span><span>h</span></p>
       </div>
       <!-- GALLERY  -->
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
         <div class="portfolio__item pi-grid">
           <div class="portfolio__thumbnail gi-1 reveal-lft">
             <div class="mask"></div>
@@ -99,8 +99,23 @@
           </div>
         </div>
       </section>
+      <!--  SKILLS -->
+      <section id="skills" class="skills">
+        <div  class="skills__cv grid-cv">
+          <h3 class="gi-1">RESUME</h3>
+          <div class="gi-2">
+            <a href="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/view?usp=sharing" target="_blank">
+              
+              <img src="assets/img/cv.svg" alt="Mi cv animado">
+            </a>
+          </div>
+        </div>
+       <div class="skills__medals">
+
+       </div>
+      </section>
       <!-- CONTACT ME -->
-      <section class="contact" >
+      <section id="contact" class="contact" >
         <div id="contacttext" class="contact__title-cont">
           <a class="contact__title" onclick="revealContact()">
             Lets get in touch! <span>;)</span>
@@ -131,15 +146,25 @@
             placeholder="+569 1122 3344"
           />
           <label class="contact__label" for="textbox">Leave a message</label>
-          <input
+          <textarea
+            rows="5"
+            cols="33"
             class="contact__textbox"
             type="text"
             name="textbox"
             id="textbox"
-          />
+            placeholder="After the beep...   **BEEP!!**"
+          ></textarea>
           <input type="submit" value="Send" class="contact__submit" />
         </form>
       </section>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__logo">
+          <p>EGH</p>
+          <p>Ch</p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

@@ -1,1 +1,23 @@
-//This file is for create your style with relation on space of footer
+.footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $mxmm-blue-purple, $alpha: 0.1);
+  &__logo {
+    border: 10px solid $azure-x-11;
+    height: 85px;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1px;
+    p {
+      font-family: "Poppins";
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $azure-x-11;
+    }
+  }
+}
