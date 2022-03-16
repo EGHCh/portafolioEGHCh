@@ -101,20 +101,20 @@
       </section>
       <!--  SKILLS -->
       <section id="skills" class="skills">
-        <div class="skill skills__resume" onclick="selectResume(this)">
+        <div class="skill" onclick="selectResume(this)">
           <div class="mask"></div>
           <image id="resume" class="skill__icon" src="assets/img/astronaut.svg" />
-          <h2 class="skill__title skills__resume-title">Resume</h2>
-          <iframe class="skill__content skills__resume-iframe" src="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/preview" width="640" height="480" allow="autoplay"></iframe>
-          <img class="skill__back" src="assets/img/arrows-right.svg" alt="back to first state">
+          <h2 class="skill__title">Resume</h2>
+          <iframe class="skill__content" src="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/preview" width="640" height="480" allow="autoplay"></iframe>
+          <img class="skill__back" onclick="backToSkills()" src="assets/img/arrows-right.svg" alt="back to first state">
         </div>
         
-        <div class="skill skills__medals" onclick="selectResume(this)">
+        <div class="skill" onclick="selectResume(this)">
           <div class="mask"></div>
           <image class="skill__icon" src="assets/img/jedi-journal.svg" />
           <h2 class="skill__title">A proud nerd's gallery</h2>
           <div class="skill__content">
-          <img class="skill__back" src="assets/img/arrows-right.svg" alt="back to first state">
+          <img class="skill__back" onclick="backToSkills(this)" src="assets/img/arrows-right.svg" alt="back to first state">
           </div>
         </div>
 
