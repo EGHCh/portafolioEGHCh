@@ -1,38 +1,88 @@
 .skills {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  &__cv {
-    height: 500px;
-    width: 500px;
-    align-items: center;
-    border-radius: 0px 20px 20px 0px;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(
-      circle,
-      rgba(238, 174, 202, 0.5032212714187237) 0%,
-      rgba(148, 187, 233, 0.5032212714187237) 100%
-    );
-    h3 {
-      font-family: "Courier New", Courier, monospace;
-      font-size: 40px;
-      color: $azure-x-11;
-    }
-    img {
+  .skill {
+    &__icon {
       height: 300px;
       width: 300px;
-      place-self: center;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      object-fit: none;
-      object-position: top left;
-      box-shadow: -25px 20px $eerie-black;
-      &:hover {
-        cursor: pointer;
-        box-shadow: -20px 20px $eerie-black;
-        animation: move-cv 10s infinite;
+      cursor: pointer;
+
+    }
+
+    &__title {
+      font-family: "Poppins", Courier, monospace;
+      font-size: 80px;
+    }
+
+    &__content {
+      display: none;
+    }
+    &__back {
+      display: none;
+    }
+
+
+    &--display {
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      // grid-gap: 50px;
+      padding: 0 10%;
+      width: 100%;
+      height: 100%;
+
+      .mask {
+        width: 90%;
+        height: 90%;
+        left: 5%;
         border-radius: 20px;
+        align-self: center;
+        background-image: linear-gradient(
+          to right top,
+          #914273,
+          #975f94,
+          #9b7bb2,
+          #9f96cb,
+          #a6b1e1
+        );
+        position: absolute;
+        z-index: -1;
+      }
+
+      .skill__icon {
+        height: 100px;
+        width: 100px;
+        grid-column-start: 1;
+        place-self: center;
+      }
+
+      .skill__content {
+        width: 90%;
+        height: 70%;
+        display: flex;
+        border: none;
+        place-self: center;
+      }
+
+      .skill__title {
+        display: none;
+      }
+      .skill__back {
+        display: block;
+        width: 100px;
+        place-self: center;
+        cursor: pointer;
       }
     }
+
+  }
+
+
+  // .skill--display + .skill{
+  .skill--hide {
+    display: none;
   }
 }

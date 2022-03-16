@@ -23,6 +23,7 @@
       &__icons {
         display: flex;
         gap: 1em;
+        cursor: pointer;
       }
       &__icons .ico {
         height: 40px;
@@ -41,7 +42,6 @@
   &__thumbnail {
     width: 200px;
     height: 444px;
-    z-index: -1;
     img {
       width: 100%;
       height: 100%;
@@ -73,6 +73,7 @@
 
       &:hover {
         animation: blur 0.5s ease-in-out;
+        cursor: pointer;
         opacity: 0;
       }
     }

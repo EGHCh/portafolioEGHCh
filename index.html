@@ -25,7 +25,7 @@
       <ul class="navbar__nav">
         <li class="navbar__item"><a href="#hero">Home</a></li>
         <li class="navbar__item"><a href="#portfolio">Portfolio</a></li>
-        <li class="navbar__item"><a>Skills</li>
+        <li class="navbar__item"><a href="#skills">Skills</li>
         <li class="navbar__item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -101,18 +101,23 @@
       </section>
       <!--  SKILLS -->
       <section id="skills" class="skills">
-        <div  class="skills__cv grid-cv">
-          <h3 class="gi-1">RESUME</h3>
-          <div class="gi-2">
-            <a href="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/view?usp=sharing" target="_blank">
-              
-              <img src="assets/img/cv.svg" alt="Mi cv animado">
-            </a>
+        <div class="skill skills__resume" onclick="selectResume(this)">
+          <div class="mask"></div>
+          <image id="resume" class="skill__icon" src="assets/img/astronaut.svg" />
+          <h2 class="skill__title skills__resume-title">Resume</h2>
+          <iframe class="skill__content skills__resume-iframe" src="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/preview" width="640" height="480" allow="autoplay"></iframe>
+          <img class="skill__back" src="assets/img/arrows-right.svg" alt="back to first state">
+        </div>
+        
+        <div class="skill skills__medals" onclick="selectResume(this)">
+          <div class="mask"></div>
+          <image class="skill__icon" src="assets/img/jedi-journal.svg" />
+          <h2 class="skill__title">A proud nerd's gallery</h2>
+          <div class="skill__content">
+          <img class="skill__back" src="assets/img/arrows-right.svg" alt="back to first state">
           </div>
         </div>
-       <div class="skills__medals">
 
-       </div>
       </section>
       <!-- CONTACT ME -->
       <section id="contact" class="contact" >

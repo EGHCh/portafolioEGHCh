@@ -34,9 +34,44 @@ function revealFromRight() {
 
 window.addEventListener("scroll", revealFromRight);
 
-let revealContact = () => {
+// SKILLS
+
+let selectResume = (skill) => {
+  const skills = document.querySelectorAll('.skills .skill');
+  skills.forEach((item) => {
+    item.classList.remove('skill--display');
+    item.classList.add('skill--hide');
+  });
+
+  skill.classList.add('skill--display');
+  skill.classList.remove('skill--hide');
+
+  // let choiceContainer = document.querySelector(`.skills__${choice.id}`);
+  // let ico = container.querySelector('.skill_icon');
+  // let title = document.querySelector('.skill__title');
+  // let display = document.querySelector('.skill__display');
+
+  // if (container.id === "resume") {
+  //   remove = "medals";
+  // } else {
+  //   remove = "resume";
+  // }
+  // console.log(title);
+
+  // remove = document.querySelector(`.skills__${remove}`);
+  // remove.classList.add("remove");
+  // containerContainer.classList.add(
+  //   `${containerContainer.className}--display`.replace(/\s/g, "")
+  // );
+  // ico.classList.add(`${ico.className}--display`.replace(/\s/g, ""));
+  // title.classList.add(`${title.className}--display`.replace(/\s/g, ""));
+  // iframe.classList.add(`${iframe.className}--display`.replace(/\s/g, ""));
+};
+
+// CONTACT
+function revealContact() {
   let toShrink = document.getElementById(`contacttext`);
   let toReveal = document.getElementById(`contactform`);
   toReveal.classList.add(`contact__form--show`);
   toShrink.classList.add(`contact__title-cont--shrink`);
-};
+}
