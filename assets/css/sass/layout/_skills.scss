@@ -1,21 +1,32 @@
 .skills {
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
   width: 100%;
-  justify-content: space-around;
+  place-items: center;
+
+  .skills__back {
+    display: none;
+  }
 
   .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__icon {
-      height: 300px;
-      width: 300px;
+      height: 200px;
+      width: 200px;
       cursor: pointer;
-
     }
 
     &__title {
       font-family: "Poppins", Courier, monospace;
-      font-size: 80px;
+      font-size: 60px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 20px;
+      cursor: pointer;
     }
 
     &__content {
@@ -25,11 +36,9 @@
       display: none;
     }
 
-
     &--display {
       display: grid;
       grid-template-columns: 10% 80% 10%;
-      // grid-gap: 50px;
       pointer-events: auto;
       padding: 0 10%;
       width: 100%;
@@ -52,12 +61,14 @@
         position: absolute;
         z-index: -1;
       }
-
+      
       .skill__icon {
         height: 100px;
         width: 100px;
         grid-column-start: 1;
         place-self: center;
+        filter: drop-shadow($shadow-light);
+        animation: iconIn 2s ease-in;
       }
 
       .skill__content {
@@ -66,21 +77,36 @@
         display: flex;
         border: none;
         place-self: center;
+        animation: contentIn 1s ease-in;
       }
-
+      .skill__content--gallery {
+        overflow: scroll;
+        flex-direction: column;
+        height: 90vh;
+        max-width: 500px;
+        box-shadow: inset 4px 27px 15px -19px #000000;
+        filter: drop-shadow($shadow-light);
+        gap: 20px;
+      }
+      
       .skill__title {
         display: none;
       }
-      .skill__back {
-        display: block;
-        width: 100px;
-        place-self: center;
-        cursor: pointer;
-        
-        &:hover {
-          width: 110px;
-        }
-      }
+    }
+  }
+  .skill__back--display {
+    display: block;
+    position: absolute;
+    right: 10%;
+    display: block;
+    width: 100px;
+    place-self: center;
+    filter: drop-shadow($shadow-light);
+    cursor: pointer;
+    animation: backArrowsIn 2.5s ease-in;
+
+    &:hover {
+      width: 110px;
     }
   }
   .skill--hide {

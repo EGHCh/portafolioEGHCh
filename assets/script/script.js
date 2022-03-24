@@ -38,33 +38,26 @@ window.addEventListener("scroll", revealFromRight);
 
 let selectResume = (skill) => {
   const skills = document.querySelectorAll(".skills .skill");
-  console.log(skills.classList)
-
-  if (skill.classList[1] !== undefined) {
-    skills.forEach((item) => {
-      item.classList.remove("skill--display");
-      item.classList.remove("skill--hide");
-    });
-    break
-  };
-
+  const backToSkills = document.querySelector(".skills #backToSkills");
+    
   skills.forEach((item) => {
     item.classList.remove("skill--display");
     item.classList.add("skill--hide");
   });
   skill.classList.add("skill--display");
   skill.classList.remove("skill--hide");
+  
+  backToSkills.classList.add("skill__back--display");
 };
 
-let backToSkills = (container) => {
+let backToSkills = (button) => {
   const skills = document.querySelectorAll(".skills .skill");
-  console.log(skills);
   skills.forEach((item) => {
-    console.log(item)
     item.classList.remove("skill--display");
     item.classList.remove("skill--hide");
   });
-};
+  button.classList.remove("skill__back--display")
+}
 
 // CONTACT
 function revealContact() {

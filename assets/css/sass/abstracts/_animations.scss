@@ -74,21 +74,33 @@
 //   }
 // }
 //SKILLS
-@keyframes move-cv { 
-  5% {
-    border-radius: 20px;
-  }
-  20% {
-    object-position: top right;
+@keyframes iconIn {
+  0% {
+    transform: translate(-70%, 0);
+    opacity: 0;
   }
   50% {
-    object-position: bottom right;
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+}
+@keyframes backArrowsIn {
+  
+  0% {
+    transform: translate(70%, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+}
+@keyframes contentIn  {
+  0% {
+    opacity: 0%;
   }
   80% {
-    object-position: bottom left;
-  }
-  100% {
-    border-radius: 20px;
+    opacity: 100%;
   }
 }
 
