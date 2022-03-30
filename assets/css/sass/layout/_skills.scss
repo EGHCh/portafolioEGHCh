@@ -1,7 +1,7 @@
 .skills {
   height: 100vh;
   display: grid;
-  border-top: 2px solid rgba($color: #ffffff, $alpha: 8.0);
+  border-top: 2px solid rgba($color: $azure-x-11, $alpha: 0.1);
   grid-template-columns: 50%;
   grid-auto-flow: column dense;
   align-items: center;
