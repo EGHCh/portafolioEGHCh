@@ -1,26 +1,38 @@
-.hs-grid {
+// HERO-SECTION
+@media (min-width: 768px) {
+  .hs-grid {
+    grid-template-columns: 1fr 1fr;
+    .gi-1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      place-self: center;
+    }
+    .gi-2 {
+      grid-column-start: 2;
+    }
+    .gi-3 {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      align-self: start;
+    }
+  }
+}
+// SKILLS
+.grid-cv {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  .gi-1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    place-self: center;
-  }
+  grid-template-rows: 20% 60% 20%;
+  .gi-1,
   .gi-2 {
-    grid-column-start: 2;
-  }
-  .gi-3 {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    align-self: start;
+    place-self: center;
   }
 }
 .pi-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  .gi-1, .gi-2 {
+  .gi-1,
+  .gi-2 {
     place-self: center;
   }
 }

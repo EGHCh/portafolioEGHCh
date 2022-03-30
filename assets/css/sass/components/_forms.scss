@@ -1,29 +1,9 @@
 // Contact form
 .contact {
-  height: 100vh;
-  width: 100%;
-  &__title-cont {
-    display: flex;
-    width: 30%;
-    justify-content: center;
-    margin: auto 0;
-    &:hover {
-      color: #fff;
-      -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-      -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-      animation: neon1 1.5s ease-in-out infinite alternate;
-    }
-  }
-  &__title {
-    font-size: 3em;
-    font-weight: lighter;
-    font-family: "Poppins", sans-serif;
-    color: $azure-x-11;
-  }
   &__form {
     width: 70%;
     min-height: 650px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     margin: auto 0;
@@ -31,12 +11,12 @@
     gap: 1em;
     height: 500px;
     border-left: 2px solid $light-gray;
+    font-family: "Courier New", Courier, monospace;
   }
   &__label {
     font-size: 2.5em;
     font-weight: 700;
     color: $azure-x-11;
-    font-family: "Courier New", Courier, monospace;
   }
   &__input {
     max-width: 70%;
@@ -44,11 +24,27 @@
     font-size: 1.5em;
   }
   &__textbox {
+    font-size: 2em;
     max-width: 70%;
-    height: 10em;
+    height: 14em;
+    text-align: start;
+    padding: 0.5em;
   }
   &__submit {
-    width: 200px;
-    height: 100px;
+    font-size: 6em;
+    font-family: "Poppins";
+    max-width: 70%;
+    text-align: start;
+    border: none;
+    color: $azure-x-11;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover {
+      animation: submit-hover 0.5s ease-in;
+      background-color:rgba($color: $azure-x-11, $alpha: 0.8);
+      color: $eerie-black;
+      text-align: center;
+      font-weight: 700;
+    }
   }
 }

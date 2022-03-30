@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/script/script.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -22,24 +23,24 @@
     <!-- NAVBAR -->
     <nav class="navbar">
       <ul class="navbar__nav">
-        <li class="navbar__item navbar__item--active">Home</li>
-        <li class="navbar__item">Portafolio</li>
-        <li class="navbar__item">CV</li>
-        <li class="navbar__item">Skills</li>
+        <li class="navbar__item"><a href="#hero">Home</a></li>
+        <li class="navbar__item"><a href="#portfolio">Portfolio</a></li>
+        <li class="navbar__item"><a href="#skills">Skills</a></li>
+        <li class="navbar__item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <main class="main">
-      <div class="welcome">
+    <main id="main" class="main">
+      <!-- <div class="welcome">
         <div class="welcome__logo">
           <p class="word word--frst">
             <span>E</span><span>G</span><span>H</span>
           </p>
           <p class="word word--scnd"><span>C</span><span>h</span></p>
         </div>
-      </div>
+      </div> -->
       <!-- HERO SECTION -->
-      <section class="hero hs-grid">
-        <img src="assets/img/tebanes.jpg" alt="" class="hero__portrait gi-1" />
+      <section id="hero" class="hero hs-grid">
+        <img src="assets/img/tebanes2.jpg" alt="" class="hero__portrait gi-1" />
         <h1 class="gi-2 hero__title">Hi! I'm Esteban...</h1>
         <div class="gi-2 hero__textbox">
           <p class="hero__p">
@@ -59,59 +60,204 @@
         <p class="word word--scnd"><span>C</span><span>h</span></p>
       </div>
       <!-- GALLERY  -->
-      <section class="portfolio">
-        <div class="portfolio__item pi-grid">
-          <div class="portfolio__thumbnail gi-1 reveal-lft">
-            <div class="mask"></div>
-            <img src="assets/img/lmwr.png" alt="Screenshot de L.M.W.G." />
+      <section id="portfolio" class="porfolio-container">
+        <h1>SOME HIGHLIGHTS</h1>
+        <div class="portfolio">
+          <div class="portfolio__item pi-grid">
+            <div class="portfolio__thumbnail gi-1 reveal-lft">
+              <a href="https://eghch.github.io/MWR/" target="_blank"
+                ><div class="mask"></div
+              ></a>
+              <img src="assets/img/lmwr.png" alt="Screenshot de L.M.W.G." />
+            </div>
+            <div class="item__description gi-2 reveal-rgt">
+              <h3>Last Martian Weather Report</h3>
+              <p>
+                LMWR Is a web app that display last aviable weather
+                report(temperature, pressur, wind) taked on the surface of Mars
+                at Elysium planitia. All the data is provided by NASA's InSight
+                API & app is built on vanilla <span>JS</span>,
+                <span>HTML</span> & <span>SASS</span>.
+              </p>
+              <div class="item__description__icons">
+                <a href="https://github.com/EGHCh/MWR.git" target="_blank"
+                  ><img
+                    src="assets/img/gitIco.svg"
+                    alt="Icono GitHub"
+                    class="ico"
+                /></a>
+                <a href="https://eghch.github.io/MWR/" target="_blank"
+                  ><img
+                    src="assets/img/browser.svg"
+                    alt="Icono GitHub"
+                    class="ico"
+                /></a>
+              </div>
+            </div>
           </div>
-          <div class="item__description gi-2 reveal-rgt">
-            <h3>Last Martian Weather Report</h3>
-            <p>
-              LMWR Is a web app that display last aviable weather
-              report(temperature, pressur, wind) taked on the surface of Mars at
-              Elysium planitia. All the data is provided by NASA's InSight API.
-            </p>
-            <div class="item__description__icons">
-              <img src="assets/img/gitIco.svg" alt="Icono GitHub" class="ico" />
+          <div class="portfolio__item pi-grid">
+            <div
+              class="portfolio__thumbnail portfolio__thumbnail--desktop gi-1 reveal-lft"
+            >
+              <a
+                href="https://eghch.github.io/Barbershop/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><div class="mask"></div
+              ></a>
               <img
-                src="assets/img/browser.svg"
-                alt="Icono GitHub"
-                class="ico"
+                class="--desktop"
+                src="assets/img/barbershopdesk.png"
+                alt="Screenshot de L.M.W.G."
               />
+            </div>
+            <div class="item__description gi-2 reveal-rgt">
+              <h3>Barbershop Blog</h3>
+              <p>
+                A full responsive landing-page blog for a fictional Barbershop,
+                built on <span>Bootstrap</span>, <span>HTML</span> &
+                <span>SASS</span>
+              </p>
+              <div class="item__description__icons">
+                <a
+                  href="https://github.com/EGHCh/Barbershop.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="assets/img/gitIco.svg"
+                    alt="Icono GitHub"
+                    class="ico"
+                /></a>
+                <a
+                  href="https://eghch.github.io/Barbershop/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="assets/img/browser.svg"
+                    alt="Icono GitHub"
+                    class="ico"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item pi-grid">
+            <div
+              class="portfolio__thumbnail portfolio__thumbnail--desktop gi-1 reveal-lft"
+            >
+              <a
+                href="https://github.com/EGHCh/portafolioEGHCh.git"
+                target="_blank"
+                ><div class="mask"></div
+              ></a>
+              <img
+                class="--desktop"
+                src="assets/img/portfolio.png"
+                alt="Screenshot de L.M.W.G."
+              />
+            </div>
+            <div class="item__description gi-2 reveal-rgt">
+              <h3>This totally awesome portfolio</h3>
+              <p>
+                Why don't take a time to brag about all the cool animations and
+                transitions here, I work every single day on this so this site
+                is growing with me ;) I made this on vanilla<span>JS</span>,
+                <span>HTML</span> & <span>SASS</span>.
+              </p>
+              <div class="item__description__icons">
+                <a
+                  href="https://github.com/EGHCh/portafolioEGHCh.git"
+                  target="_blank"
+                  ><img
+                    src="assets/img/gitIco.svg"
+                    alt="Icono GitHub"
+                    class="ico"
+                /></a>
+                <img
+                  src="assets/img/browser.svg"
+                  alt="Icono GitHub"
+                  class="ico"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div class="portfolio__item pi-grid">
-          <div class="portfolio__thumbnail gi-1 reveal-lft">
-            <div class="mask"></div>
-            <img src="assets/img/lmwr.png" alt="Screenshot de L.M.W.G." />
-          </div>
-          <div class="item__description gi-2 reveal-rgt">
-            <h3>LMWR</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              quisquam, quo delectus quae aut soluta numquam quam, inventore
-              nisi, cum ea nostrum suscipit pariatur praesentium dicta! Eveniet
-              sint vitae dignissimos.
-            </p>
+      </section>
+      <!--  SKILLS -->
+      <section id="skills" class="skills">
+        <img
+          id="backToSkills"
+          class="skill__back"
+          onclick="backToSkills(this)"
+          src="assets/img/arrows-right.svg"
+          alt="back to first state"
+        />
+        <div class="skill" onclick="selectResume(this)">
+          <div class="mask"></div>
+          <image
+            id="resume"
+            class="skill__icon"
+            src="assets/img/astronaut.svg"
+          />
+          <h2 class="skill__title">Resume</h2>
+          <iframe
+            class="skill__content"
+            src="https://drive.google.com/file/d/1EpXbgV1OaK0Rfx13GpEDWpDGsMbomyBn/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+          ></iframe>
+        </div>
+
+        <div class="skill" onclick="selectResume(this)">
+          <div class="mask"></div>
+          <image class="skill__icon" src="assets/img/jedi-journal.svg" />
+          <h2 class="skill__title">A proud nerd's gallery</h2>
+          <div class="skill__content skill__content--gallery">
+            <img src="assets/img/medals/diploma-ingles-trabajo.png" alt="" />
+            <img
+              src="assets/img/medals/diploma-ingles-intermedio-conversacion.png"
+              alt=""
+            />
+            <img src="assets/img/medals/1.png" alt="" />
+            <img src="assets/img/medals/Certificación soporte TI.png" alt="" />
+            <img src="assets/img/medals/CSS-avanzado-G14.png" alt="" />
+            <img
+              src="assets/img/medals/Curso definitivo de HTML y CSS.png"
+              alt=""
+            />
+            <img src="assets/img/medals/diploma-basico-javascript.png" alt="" />
+            <img
+              src="assets/img/medals/diploma-frontend-developer-practico.png"
+              alt=""
+            />
+            <img
+              src="assets/img/medals/diploma-javascript-practico.png"
+              alt=""
+            />
+            <img
+              src="assets/img/medals/Fundamentos de desarrollo web.png"
+              alt=""
+            />
+            <img src="assets/img/medals/diploma-mobile-first.png" alt="" />
           </div>
         </div>
       </section>
       <!-- CONTACT ME -->
-      <section class="contact">
-        <div class="contact__title-cont">
-          <h2 class="contact__title">Lets get in touch! <span>;)</span></h2>
+      <section id="contact" class="contact">
+        <div id="contacttext" class="contact__title-cont">
+          <a class="contact__title" onclick="revealContact()">
+            Lets get in touch! <span>;)</span>
+          </a>
         </div>
-        <form action="" class="contact__form">
-          <label class="contact__label"for="name">Name</label>
+        <form id="contactform" action="https://formsubmit.co/esteban.hormazabal.ch@gmail.com" method="POST" class="contact__form">
+          <label class="contact__label" for="name">Name</label>
           <input
             class="contact__input"
             type="text"
             name="name"
             placeholder="Name"
           />
-          <label class="contact__label"for="email">Email</label>
+          <label class="contact__label" for="email">Email</label>
           <input
             class="contact__input"
             type="email"
@@ -119,7 +265,7 @@
             id="email"
             placeholder="your@email.com"
           />
-          <label class="contact__label"for="phone">Phone</label>
+          <label class="contact__label" for="phone">Phone</label>
           <input
             class="contact__input"
             type="text"
@@ -127,17 +273,29 @@
             id="phone"
             placeholder="+569 1122 3344"
           />
-          <label class="contact__label"for="textbox">Leave a message</label>
-          <input
+          <input type="text" name="_honey" style="display:none">
+          <label class="contact__label" for="message">Leave a message</label>
+          <textarea
+            rows="5"
+            cols="33"
             class="contact__textbox"
             type="text"
-            name="textbox"
+            name="message"
             id="textbox"
-          />
-          <input type="submit" value="Send" class="contact__submit" />
+            placeholder="After the beep...   **BEEP!!**"
+          ></textarea>
+          <button value="Send" class="contact__submit" />Send</button>
         </form>
       </section>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__logo">
+          <p>EGH</p>
+          <p>Ch</p>
+        </div>
+      </footer>
+
+      <!-- SCRIPTS -->
     </main>
-    <script src="assets/script/script.js"></script>
   </body>
 </html>
