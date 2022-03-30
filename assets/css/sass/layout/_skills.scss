@@ -1,6 +1,7 @@
 .skills {
   height: 100vh;
   display: grid;
+  border-top: 2px solid rgba($color: #ffffff, $alpha: 8.0);
   grid-template-columns: 50%;
   grid-auto-flow: column dense;
   align-items: center;
@@ -43,6 +44,9 @@
       pointer-events: auto;
       padding: 0 10%;
       width: 100vw;
+      position: absolute;
+      left: 0;
+      z-index: -1;
       height: 100%;
 
       .mask {

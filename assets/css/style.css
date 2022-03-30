@@ -143,6 +143,10 @@ html {
 html body {
   background-color: #191919;
   color: #d6e5e3;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -325,6 +329,9 @@ html body {
   border-radius: 0.5em;
 }
 
+.main {
+  max-width: 1440px;
+}
 .main .hero {
   font-family: "Courier New", Courier, monospace;
   color: #d6e5e3;
@@ -367,10 +374,12 @@ html body {
     border-radius: 100%;
   }
 }
+.porfolio-container {
+  border-top: 2px solid white;
+}
 .porfolio-container h1 {
   font-size: 7em;
   font-family: "Poppins", sans-serif;
-  width: 100vw;
   display: flex;
   margin-top: 100px;
   justify-content: center;
@@ -472,8 +481,11 @@ html body {
 
 .contact {
   display: flex;
-  height: 100vh;
+  margin: 200px 0px;
   width: 100%;
+  height: 100vh;
+  justify-content: center;
+  border-top: 2px solid white;
 }
 .contact__title-cont {
   display: flex;
@@ -516,6 +528,7 @@ html body {
 
 .footer {
   height: 200px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,6 +554,7 @@ html body {
 .skills {
   height: 100vh;
   display: grid;
+  border-top: 2px solid white;
   grid-template-columns: 50%;
   grid-auto-flow: column dense;
   align-items: center;
@@ -580,6 +594,9 @@ html body {
   pointer-events: auto;
   padding: 0 10%;
   width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: -1;
   height: 100%;
 }
 .skills .skill--display .mask {

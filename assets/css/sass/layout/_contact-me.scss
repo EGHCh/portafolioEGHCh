@@ -1,7 +1,10 @@
 .contact {
   display: flex;
-  height: 100vh;
+  margin:  200px 0px;
   width: 100%;
+  height: 100vh;
+  justify-content: center;
+  border-top: 2px solid rgba($color: #ffffff, $alpha: 8.0);
   &__title-cont {
     display: flex;
     justify-content: center;
