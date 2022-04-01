@@ -9,3 +9,39 @@ html {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  .navbar,
+  .main,
+  .hero,
+  .portfolio-container,
+  .skills,
+  .contact {
+    display: none;
+  }
+  .disclaimer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 200px);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: "Courier New", Courier, monospace;
+
+    h1 {
+      font-weight: 700;
+      font-size: 30px;
+      text-justify: center;
+    }
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+@media (min-width: 768px) {
+  html body .disclaimer {
+    display: none;
+  }
+}
